@@ -6,21 +6,29 @@
     <link rel="stylesheet" href="my.css">
 </head>
 <body>
-    <div class="person">
-        <h1>One</h1>
-        <p>Your age: 26</p>
-    </div>
-    <div class="person">
-        <h1>Two</h1>
-        <p>Your age: 25</p>
-    </div>
+    <div id="app"></div>
 
     <div id="like_button_container"></div>
 
-    <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script> -->
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
+    <!-- IN PROD MODE -->
+    <!-- <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script> -->
+    <!-- <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script> -->
+    
+    <!-- IN DEV MODE -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <script src="likeBtn.js"></script>
+
+    <script src="/dist/likeBtn.js"></script>
+
+    <!-- FOR TRANSFORM ES6 -> ES5 IN RUNTIME -->
+    <!-- <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+    <!-- <script type="text/babel" data-presets="es2017,react" src="/src/likeBtn.js"></script> -->
+    <!-- <script type0="text/babel" data-presets="es2017,react">
+        // DONT WORK (
+        import Person from '/likeBtn.js'
+    
+        console.log('Person:', Person)
+    
+    </script> -->
 </body>
 </html>

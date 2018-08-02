@@ -4,17 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "frontend": "npx babel --watch src --out-dir dist --presets es2015",
+    "frontend": "npx babel --watch src --out-dir dist",
     "frontend0": "npx babel --watch src --out-dir dist --presets dist",
-
-    "start": "static src -p 80",
+    "start": "static . -p 80",
+    "dev": "npm run frontend || npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015",
+      "es2017",
+      "react"
+    ]
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1"
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
   }
 }
